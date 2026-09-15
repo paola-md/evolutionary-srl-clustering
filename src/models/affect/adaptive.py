@@ -5,11 +5,10 @@ sys.path.append('./../../src/')
 
 from models.gridsearch.utils import reorder_labels, get_optimal_params
 from models.clustering import spectral_clustering
-from models.cluster_analysis import get_scores, get_group_composition
+from models.cluster_analysis import get_scores
 from models.results import save_metadata, save_labels, save_labels_metadata
 from features.load_data import get_data
-from project_settings import PREFIX
-from etl.postgres_utils import get_select, execute_query
+from etl.postgres_utils import execute_query
 from datetime import datetime
 
 

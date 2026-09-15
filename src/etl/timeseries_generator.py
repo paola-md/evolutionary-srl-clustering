@@ -1,5 +1,4 @@
 import numpy as np
-import statistics
 
 from pandas.core.common import flatten
 from matplotlib import pyplot as plt

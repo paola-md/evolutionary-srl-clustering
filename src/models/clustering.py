@@ -5,7 +5,6 @@ from scipy.sparse.csgraph import laplacian
 from scipy.spatial import distance
 from sklearn.cluster import KMeans
 from sklearn.metrics import silhouette_score
-from sklearn.neighbors import kneighbors_graph
 from sklearn.manifold import spectral_embedding
 
 SEED = 111

@@ -4,20 +4,17 @@ from datetime import datetime
 import pickle
 from pathlib import Path
 
-import random
 import numpy as np
-import seaborn as sns
 import pandas as pd
 import itertools as it
 
 import sys
 sys.path.append('./../../src/')
 
-from project_settings import PREFIX, FEATURE_GROUPS, FEATURE_GROUPS_GENEVA, TEST_ID
-from etl.postgres_utils import get_select, execute_query
+from project_settings import FEATURE_GROUPS, FEATURE_GROUPS_GENEVA, TEST_ID
+from etl.postgres_utils import execute_query
 from features.load_data import get_data
-from models.cluster_analysis import get_scores,  get_pairwise_wilcoxon, get_group_composition
-from models.results import save_kmodes, save_metadata, save_labels, save_labels_metadata, save_group_metadata
+from models.results import save_metadata, save_labels, save_group_metadata
 from models.gridsearch.utils import reorder_labels, get_optimal_params
 from visualization.evaluation import plot_boxplot
 

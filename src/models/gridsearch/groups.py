@@ -6,15 +6,15 @@ from tqdm import tqdm
 import sys
 sys.path.append('./../../src/')
 
-from project_settings import PREFIX, TEST_ID,FEATURE_GROUPS, FEATURE_GROUPS_GENEVA
+from project_settings import TEST_ID,FEATURE_GROUPS, FEATURE_GROUPS_GENEVA
 from etl.postgres_utils import get_select
 from features.load_data import get_data
 from features.preprocess import format_feature, get_distance_matrix, \
 get_affinity_matrix, normalize
 from models.clustering import spectral_clustering
 from models.gridsearch.utils import reorder_labels, get_optimal_params
-from models.cluster_analysis import get_scores, get_group_composition
-from models.results import save_metadata, save_labels, save_labels_metadata, save_group_metadata
+from models.cluster_analysis import get_scores
+from models.results import save_metadata, save_labels, save_group_metadata
 
 
 def create_feature_groups(search= True, feature_groups = FEATURE_GROUPS,

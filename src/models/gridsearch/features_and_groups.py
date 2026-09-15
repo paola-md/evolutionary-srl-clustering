@@ -11,14 +11,12 @@ import sys
 sys.path.append('./../../src/')
 
 from project_settings import PREFIX, FEATURE_GROUPS
-from etl.postgres_utils import get_select
 from features.load_data import get_data
 from features.preprocess import format_feature, get_distance_matrix, get_affinity_matrix
 from models.clustering import spectral_clustering
 from models.gridsearch.utils import reorder_labels
-from models.cluster_analysis import get_scores, get_group_composition
-from models.results import save_metadata, save_labels, save_labels_metadata, save_group_metadata
-from models.gridsearch.groups import gridsearch_spectral_clusters
+from models.cluster_analysis import get_scores
+from models.results import save_metadata, save_labels, save_group_metadata
 
 
 def optimize_feature_groups(search= True, feature_groups = FEATURE_GROUPS):

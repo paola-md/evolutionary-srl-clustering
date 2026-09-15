@@ -1,21 +1,18 @@
 import pandas as pd
-import numpy as np
 import itertools as it
 from sklearn.cluster import DBSCAN
 
 import sys
 sys.path.append('./../../src/')
 
-from project_settings import PREFIX, TEST_ID, KERNEL_METRIC, FEATURE_GROUPS, FEATURE_GROUPS_GENEVA, CLUSTER_METRIC
-from etl.postgres_utils import get_select
-from features.preprocess import get_feature_kernels,format_feature
+from project_settings import PREFIX, TEST_ID, KERNEL_METRIC, FEATURE_GROUPS, FEATURE_GROUPS_GENEVA
+from features.preprocess import get_feature_kernels
 from features.load_data import get_data
 from models.clustering import spectral_clustering
-from models.cluster_analysis import get_scores, get_group_composition
+from models.cluster_analysis import get_scores
 from models.results import save_metadata, save_labels, save_labels_metadata
 from models.gridsearch.utils import reorder_labels, get_optimal_params
 
-from visualization.evaluation import plot_mean
 
 
 

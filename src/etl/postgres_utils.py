@@ -9,7 +9,6 @@ from pathlib import Path
 from io import StringIO
 
 import psycopg2
-from psycopg2.extensions import register_adapter, AsIs
 
 psycopg2.extensions.register_adapter(np.int64, psycopg2._psycopg.AsIs)
 
@@ -24,7 +23,6 @@ def nan_to_null(f,
 
 psycopg2.extensions.register_adapter(float, nan_to_null)
 
-# SQL_DIR = Path(r"/home/paola/Documents/CHEF/sql/")
 SQL_DIR = Path(__file__).parent.parent.parent / 'sql'
 
 

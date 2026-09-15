@@ -5,7 +5,6 @@ import itertools as it
 from etl.postgres_utils import get_select
 from sklearn.metrics import  f1_score
 
-from project_settings import PREFIX, CLUSTER_METRIC, TEST_ID, FEATURE_GROUPS, FEATURE_GROUPS_GENEVA
 
 def get_factor(canton, factor):
     if canton=="ticino":

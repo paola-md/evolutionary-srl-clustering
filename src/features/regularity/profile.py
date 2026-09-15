@@ -1,9 +1,7 @@
 import numpy as np
-import pandas as pd
-from scipy.special import entr
 from scipy.spatial.distance import jensenshannon
 
-from etl.postgres_utils import get_select,insert_query
+from etl.postgres_utils import get_select
 
 
 def hours_per_day(student, year, biweek = '', timespan = 'school_year'):

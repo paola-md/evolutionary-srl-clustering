@@ -1,7 +1,6 @@
-from etl.postgres_utils import get_select,insert_query,copy_df, \
-                                insert_df, execute_query
+from etl.postgres_utils import get_select,insert_df, execute_query
 
-from features.regularity.time_measures import PWD, PHD, PWD_biweekly
+from features.regularity.time_measures import PHD, PWD_biweekly
 from features.regularity.profile import WS1, WS2, WS3
 from features.regularity.frequency import FDH, FWH, FWD, FWH_biweekly
 

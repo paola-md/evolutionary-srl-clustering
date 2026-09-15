@@ -1,7 +1,7 @@
 import sys
 sys.path.append('./../src/')
 from etl.postgres_utils import get_select
-from project_settings import PREFIX, FEATURE_GROUPS, FEATURE_GROUPS_GENEVA, TEST_ID
+from project_settings import FEATURE_GROUPS, FEATURE_GROUPS_GENEVA, TEST_ID
 
 def get_data(year = 3, metric = 'dtw', time_unit = None,
             adaptive = '', canton = 'ticino', period = 'yearly'):

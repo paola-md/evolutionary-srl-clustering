@@ -1,4 +1,3 @@
-import pandas as pd
 import numpy as np
 import itertools as it
 
@@ -6,13 +5,10 @@ import sys
 sys.path.append('./../../src/')
 
 
-from models.clustering import spectral_clustering
-from models.gridsearch.features import get_optimal_params
 from models.gridsearch.groups import get_gamma_window, get_best_kernels
-from models.results import save_labels, save_labels_metadata
 from features.preprocess import get_feature_kernels
 from features.load_data import get_data
-from project_settings import PREFIX, FEATURE_GROUPS, FEATURE_GROUPS_GENEVA, TEST_ID
+from project_settings import FEATURE_GROUPS, FEATURE_GROUPS_GENEVA, TEST_ID
 from models.affect.adaptive import batch_affect_spectral
 from etl.postgres_utils import get_select
 
